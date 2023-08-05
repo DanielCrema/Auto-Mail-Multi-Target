@@ -1,11 +1,16 @@
 Auto-Mail Multi-Target
 Designed by programmer Daniel Crema
 
-This software sends e-mails automatically to multiple addresses
+This software sends emails automatically to multiple addresses
 It uses JSON objects to ensure security
 
 How to use it:
 
+=> First of all, check if you have nodejs installed in your machine
+if so, you should install nodemailer through the terminal
+-> Through the terminal, input "npm init" and then input "npm install nodemailer"
+
+=> Now let's configure your email
 -> Create an archive named secrets.json
 -> Paste this form inside the archive secrets.json as follows:
 
@@ -14,8 +19,8 @@ How to use it:
     "pass": "yourpassword",
     "from": "Your Name <youremail@yourserver.com>",
 
-    "subject": "Your E-Mail Subject",
-    "text": "Your e-mail content",
+    "subject": "Your Email Subject",
+    "text": "Your email content",
     "html": "Your html content",
 
     "emailList": {
@@ -28,9 +33,9 @@ How to use it:
 => To run the code, go on your terminal and input 'node index.js'
 
 
-* NOTE: This code is designed to send e-mails from a gmail account.
-If you use another e-mail service, you will need to find the code below at index.js and edit it
-with your e-mail service host, port, and SSL security information.
+* NOTE: This code is designed to send emails from a gmail account.
+If you use another email service, you will need to find the code below at index.js and edit it
+with your email service host, port, and SSL security information.
 
 async function sendEmails(emailsArray) {
     let transporter = nodemailer.createTransport({
@@ -45,5 +50,5 @@ async function sendEmails(emailsArray) {
 
 }
 
-Do notice that your e-mail service may ask for security checks and
+Do notice that your email service may ask for security checks and
 other procedures in order to give access to your script.
